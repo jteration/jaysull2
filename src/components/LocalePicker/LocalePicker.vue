@@ -44,10 +44,9 @@ export default defineComponent({
 		setLocale(locale: string) {
 			if (this.$root) {
 				this.$root.$i18n.locale = locale;
+				document.documentElement.lang = locale;
+				localStorage.setItem("LocalePicker.locale", locale);
 			}
-
-			document.documentElement.lang = locale;
-			localStorage.setItem("LocalePicker.locale", locale);
 		}
 	}
 });

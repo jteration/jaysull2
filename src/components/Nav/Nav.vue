@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import LocalePicker from "@/components/LocalePicker.vue";
+import LocalePicker from "@/components/LocalePicker/LocalePicker.vue";
 
 export default defineComponent({
 	name: "Nav",
