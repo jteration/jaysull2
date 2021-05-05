@@ -27,7 +27,8 @@
 				"months": "months",
 				"month": "month",
 				"and": "and",
-				"days": "days"
+				"days": "days",
+				"day": "day"
 			},
 			"Contact": { "pageTitle": "Contact" },
 			"Things": {
@@ -81,7 +82,8 @@
 				"months": "meses",
 				"month": "mes",
 				"and": "y",
-				"days": "dias"
+				"days": "días",
+				"day": "día"
 			},
 			"Contact": { "pageTitle": "Contacto" },
 			"Things": {
