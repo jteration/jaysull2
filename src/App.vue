@@ -1,20 +1,25 @@
 <template>
-	<main :class="theme">
+	<Nav />
+	<main>
 		<router-view />
 	</main>
 </template>
-
 <script lang="ts">
 import { computed, defineComponent } from "vue";
-import { useStore, ActionTypes } from "./store";
+import { useStore, ActionTypes } from "@/store";
+import Nav from "@/components/Nav.vue";
 
 export default defineComponent({
+	name: "App",
 	setup() {
 		const store = useStore();
 		store.dispatch(ActionTypes.UI.Init, { enableKeypressHandler: true });
 		const theme = computed(() => store.state.ui.theme);
 
 		return { theme };
+	},
+	components: {
+		Nav
 	}
 });
 </script>

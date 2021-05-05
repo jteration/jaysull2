@@ -3,33 +3,46 @@ import { State as RootState } from "./";
 
 type Theme = string;
 type Themes = string[];
+type AppDiv = HTMLElement | null
 
 export interface State {
 	theme: Theme;
 	themes: Themes;
+	appDiv: AppDiv
 }
 
 const state: State = {
 	theme: "light",
-	themes: ["light", "dark", "starlight", "magnolia", "mint", "plum"]
+	themes: ["light", "dark", "starlight", "magnolia", "mint", "plum"],
+	appDiv: null
 };
 
 enum MutationTypes {
-	SetTheme = "SET_THEME"
+	SetTheme = "SET_THEME",
+	SetAppDiv = "SET_APP_DIV"
 }
 
 export const UIMutationTypes = {
-	SetTheme: `ui/${MutationTypes.SetTheme}`
+	SetTheme: `ui/${MutationTypes.SetTheme}`,
+	SetAppDiv: `ui/${MutationTypes.SetAppDiv}`
 };
 
 export type Mutations = {
 	[MutationTypes.SetTheme](state: State, theme: Theme): void;
+	[MutationTypes.SetAppDiv](state: State, appDiv: AppDiv): void;
 };
 
 const mutations: MutationTree<State> & Mutations = {
 	[MutationTypes.SetTheme]: (state: State, theme: string) => {
 		state.theme = theme;
 		localStorage.setItem("UiModule.theme", theme);
+
+		if (state.appDiv != null) {
+			state.appDiv.className = theme;
+		}
+	},
+	[MutationTypes.SetAppDiv]: (state: State, appDiv: AppDiv) => {
+		state.appDiv = appDiv;
 	}
 };
 
@@ -64,6 +77,10 @@ export type Actions = {
 
 const actions: ActionTree<State, RootState> & Actions = {
 	[ActionTypes.Init]: ({ commit, dispatch }, { enableKeypressHandler }) => {
+		// Set appDiv
+		const appDiv = document.getElementById("app");
+		commit(MutationTypes.SetAppDiv, appDiv);
+
 		// Set keyboard theme switching
 		if (enableKeypressHandler) {
 			document.addEventListener("keypress", function (event: KeyboardEvent) {
