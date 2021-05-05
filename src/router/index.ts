@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Experience from "../views/Experience.vue";
 import Contact from "../views/Contact.vue";
+import Things from "../views/Things.vue";
 
 const routes: Array<RouteRecordRaw> = [
 	{
@@ -25,11 +26,11 @@ const routes: Array<RouteRecordRaw> = [
 		name: "Contact",
 		component: Contact
 	},
-	// {
-	//   path: "/things",
-	//   name: "Things",
-	//   component: Things,
-	// },
+	{
+		path: "/things",
+		name: "Things",
+		component: Things
+	},
 	{
 		path: "/:pathMatch(.*)*",
 		redirect: { name: "Home" }
