@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from "vue";
+import { defineComponent, ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
@@ -20,7 +20,12 @@ export default defineComponent({
 	setup() {
 		const i18n = useI18n();
 		const locales = i18n.availableLocales;
-		const locale = computed(() => i18n.locale).value;
+		const locale = ref(i18n.locale);
+		const storedLocale = localStorage.getItem("LocalePicker.locale");
+
+		if (storedLocale) {
+			setLocale(storedLocale);
+		}
 
 		function setLocale(newLocale: string) {
 			i18n.locale.value = newLocale;
@@ -37,13 +42,6 @@ export default defineComponent({
 		}
 
 		return { locale, locales, setLocale, localeSelection };
-	},
-	mounted() {
-		const storedLocale = localStorage.getItem("LocalePicker.locale");
-
-		if (storedLocale) {
-			this.setLocale(storedLocale);
-		}
 	}
 });
 </script>
