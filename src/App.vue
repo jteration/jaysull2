@@ -1,30 +1,45 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+	<main :class="theme">
+		<router-view />
+	</main>
 </template>
 
+<script lang="ts">
+import { computed, defineComponent } from "vue";
+import { useStore, ActionTypes } from "./store";
+
+export default defineComponent({
+	setup() {
+		const store = useStore();
+		store.dispatch(ActionTypes.UI.Init, { enableKeypressHandler: true });
+		const theme = computed(() => store.state.ui.theme);
+
+		return { theme };
+	}
+});
+</script>
+
 <style lang="scss">
+@import "themes.scss";
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: all 0.2s ease;
 
-#nav {
-  padding: 30px;
+	main {
+		height: 100%;
+		padding: 10px 40px;
+		display: flex;
+		align-items: safe center;
+		justify-content: safe center;
+		overflow-y: auto;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+		section {
+			max-width: clamp(420px, 600px, 800px);
+		}
+	}
 }
 </style>

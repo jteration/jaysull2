@@ -1,0 +1,104 @@
+{
+	"en": {
+		"locale": "English",
+		"pages": {
+			"Home": { "pageTitle": "Home", "welcome": "Welcome" },
+			"About": {
+				"pageTitle": "About",
+				"firstParagraph": "Hello, my name is Jay and I am a software engineer. I am currently based out of Kansas City, Missouri, but have lived and worked in Washington, California, Kansas, and Colorado.",
+				"secondParagraph": "My background is mostly in Javascript but I have experience with C# and am currently learning Rust. I am about 1/3 of the way in of",
+				"bookTitle": "The Rust Programming Language",
+				"bookAuthors": "by Steve Klabnik and Carol Nichols.",
+				"thirdParagraph": "I enjoy finding performant and efficient solutions that fit well in the context of the codebase as a whole. Most of my experience is in building front-end UIs in Vue and React but I'm trying to branch out to areas that are more logic heavy like systems programming."
+			},
+			"Experience": {
+				"pageTitle": "Experience",
+				"heading": "Companies I've worked with",
+				"current": "Current",
+				"title": "Title",
+				"seniorSoftwareEngineer": "Senior Software Engineer",
+				"softwareEngineer": "Software Engineer",
+				"withTheCompanyFor": "With the company for",
+				"years": "years",
+				"year": "year",
+				"months": "months",
+				"month": "month",
+				"and": "and",
+				"days": "days"
+			},
+			"Contact": { "pageTitle": "Contact" },
+			"Things": {
+				"pageTitle": "Things",
+				"codeForThisWebsite": "Code for this website"
+			}
+		},
+		"components": {
+			"LocalePicker": {
+				"localeLabel": "Language: "
+			},
+			"Prize": {
+				"prizeLabel": "Icon related to your score in this website's hidden game"
+			},
+			"ThemePicker": {
+				"themeLabel": "Theme: ",
+				"light": "Light",
+				"dark": "Dark",
+				"starlight": "Starlight",
+				"magnolia": "Magnolia",
+				"mint": "Mint",
+				"plum": "Plum"
+			}
+		}
+	},
+	"es": {
+		"locale": "Español",
+		"pages": {
+			"Home": { "pageTitle": "Índice", "welcome": "¡Bienvenido!" },
+			"About": {
+				"pageTitle": "Sobre",
+				"firstParagraph": "Hola, mi nombre es Jay y soy ingeniero de software. Actualmente vivo en Kansas City, Missouri, pero he vivido y trabajado en Washington, California, Kansas y Colorado.",
+				"secondParagraph": "Mi experiencia es principalmente en Javascript, pero tengo experiencia con C# y actualmente estoy aprendiendo Rust. Tengo aproximadamente 1/3 del camino del",
+				"bookTitle": "The Rust Programming Language",
+				"bookAuthors": "de Steve Klabnik y Carol Nichols.",
+				"thirdParagraph": "Disfruto encontrando soluciones eficaces y eficaces que se ajusten bien al contexto de la base de código en su conjunto. La mayor parte de mi experiencia es en la construcción de interfaces de usuario de front-end en Vue y React, pero estoy tratando de diversificarme en áreas que son más lógicas, como la programación de sistemas."
+			},
+			"Experience": {
+				"pageTitle": "Experiencia",
+				"heading": "Compañías con las que he trabajado",
+				"current": "Corriente",
+				"title": "Título",
+				"seniorSoftwareEngineer": "Ingeniero de software senior",
+				"softwareEngineer": "Ingeniero de software",
+				"withTheCompanyFor": "Con la empresa durante",
+				"years": "años",
+				"year": "año",
+				"months": "meses",
+				"month": "mes",
+				"and": "y",
+				"days": "dias"
+			},
+			"Contact": { "pageTitle": "Contacto" },
+			"Things": {
+				"pageTitle": "Cosas",
+				"codeForThisWebsite": "Código para este sitio web"
+			}
+		},
+		"components": {
+			"LocalePicker": {
+				"localeLabel": "Idioma: "
+			},
+			"Prize": {
+				"prizeLabel": "Icono relacionado con tu puntuación en el juego oculto de este sitio web"
+			},
+			"ThemePicker": {
+				"themeLabel": "Tema: ",
+				"light": "Luz",
+				"dark": "Oscuro",
+				"starlight": "Luz de las estrellas",
+				"magnolia": "Magnolia",
+				"mint": "Menta",
+				"plum": "Ciruelo"
+			}
+		}
+	}
+}
