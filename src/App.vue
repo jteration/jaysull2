@@ -4,6 +4,7 @@
 		<router-view />
 	</main>
 </template>
+
 <script lang="ts">
 import { computed, defineComponent } from "vue";
 import { useStore, ActionTypes } from "@/store";
@@ -13,10 +14,10 @@ export default defineComponent({
 	name: "App",
 	setup() {
 		const store = useStore();
+		// Init UI module
 		store.dispatch(ActionTypes.UI.Init, { enableKeypressHandler: true });
-		const theme = computed(() => store.state.ui.theme);
 
-		return { theme };
+		return {};
 	},
 	components: {
 		Nav
