@@ -1,6 +1,9 @@
 {
 	"en": {
-		"locale": "English",
+		"locales": {
+			"en": "English",
+			"es": "Spanish"
+		},
 		"pages": {
 			"Home": { "pageTitle": "Home", "welcome": "Welcome" },
 			"About": {
@@ -51,7 +54,10 @@
 		}
 	},
 	"es": {
-		"locale": "Español",
+		"locales": {
+			"en": "Inglés",
+			"es": "Español"
+		},
 		"pages": {
 			"Home": { "pageTitle": "Índice", "welcome": "¡Bienvenido!" },
 			"About": {

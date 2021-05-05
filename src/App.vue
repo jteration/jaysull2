@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from "vue";
+import { defineComponent } from "vue";
 import { useStore, ActionTypes } from "@/store";
 import Nav from "@/components/Nav.vue";
 

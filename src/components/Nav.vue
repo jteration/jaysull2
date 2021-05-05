@@ -11,16 +11,23 @@
 			}}</router-link>
 			<router-link to="/things">{{ $t("pages.Things.pageTitle") }}</router-link>
 		</div>
+		<div class="controls">
+			<LocalePicker />
+		</div>
 	</nav>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import LocalePicker from "@/components/LocalePicker.vue";
 
 export default defineComponent({
 	name: "Nav",
 	setup() {
 		return {};
+	},
+	components: {
+		LocalePicker
 	}
 });
 </script>
