@@ -3,12 +3,14 @@
 	<main>
 		<router-view />
 	</main>
+	<Footer />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import { useStore, ActionTypes } from "@/store";
 import Nav from "@/components/Nav/Nav.vue";
+import Footer from "@/components/Footer/Footer.vue";
 
 export default defineComponent({
 	name: "App",
@@ -20,7 +22,8 @@ export default defineComponent({
 		return {};
 	},
 	components: {
-		Nav
+		Nav,
+		Footer
 	}
 });
 </script>
