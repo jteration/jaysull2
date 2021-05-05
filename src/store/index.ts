@@ -1,6 +1,6 @@
 import { InjectionKey } from "vue";
 import { createStore, useStore as baseUseStore, Store } from "vuex";
-import { game, State as GameState } from "./game.store";
+import { game, State as GameState, GameMutationTypes } from "./game.store";
 import {
 	ui,
 	State as UiState,
@@ -18,7 +18,8 @@ export const ActionTypes = {
 };
 
 export const MutationTypes = {
-	UI: UIMutationTypes
+	UI: UIMutationTypes,
+	Game: GameMutationTypes
 };
 
 export const key: InjectionKey<Store<State>> = Symbol();

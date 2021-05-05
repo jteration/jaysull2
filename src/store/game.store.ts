@@ -17,8 +17,8 @@ enum MutationTypes {
 }
 
 export const GameMutationTypes = {
-	IncrementScore: `ui/${MutationTypes.IncrementScore}`,
-	ClearScore: `ui/${MutationTypes.ClearScore}`
+	IncrementScore: `game/${MutationTypes.IncrementScore}`,
+	ClearScore: `game/${MutationTypes.ClearScore}`
 };
 
 export type Mutations = {

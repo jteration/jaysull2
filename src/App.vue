@@ -2,6 +2,7 @@
 	<Nav />
 	<main>
 		<router-view />
+		<PixelGame />
 	</main>
 	<Footer />
 </template>
@@ -10,6 +11,7 @@
 import { defineComponent } from "vue";
 import { useStore, ActionTypes } from "@/store";
 import Nav from "@/components/Nav/Nav.vue";
+import PixelGame from "@/components/PixelGame/PixelGame.vue";
 import Footer from "@/components/Footer/Footer.vue";
 
 export default defineComponent({
@@ -23,6 +25,7 @@ export default defineComponent({
 	},
 	components: {
 		Nav,
+		PixelGame,
 		Footer
 	}
 });

@@ -3,12 +3,12 @@ import { State as RootState } from "./";
 
 type Theme = string;
 type Themes = string[];
-type AppDiv = HTMLElement | null
+type AppDiv = HTMLElement | null;
 
 export interface State {
 	theme: Theme;
 	themes: Themes;
-	appDiv: AppDiv
+	appDiv: AppDiv;
 }
 
 const state: State = {
