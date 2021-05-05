@@ -12,25 +12,24 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, Ref, ref } from "vue";
 
 export default defineComponent({
 	name: "LocalePicker",
-	data() {
-		return {
-			locales: this.$i18n.availableLocales
-		};
-	},
-	computed: {
-		locale() {
-			return this.$i18n.locale;
-		}
+	setup() {
+		const locales: Ref<string[]> = ref(["en", "es"]);
+		const locale: Ref<string> = ref("en");
+
+		return { locale, locales };
 	},
 	mounted() {
+		this.locales = this.$i18n.availableLocales;
 		const locale = localStorage.getItem("LocalePicker.locale");
 
 		if (locale) {
 			this.setLocale(locale);
+		} else {
+			this.locale = this.$i18n.locale;
 		}
 	},
 	methods: {
@@ -43,6 +42,7 @@ export default defineComponent({
 		},
 		setLocale(locale: string) {
 			if (this.$root) {
+				this.locale = locale;
 				this.$root.$i18n.locale = locale;
 				document.documentElement.lang = locale;
 				localStorage.setItem("LocalePicker.locale", locale);
