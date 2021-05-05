@@ -8,6 +8,7 @@
 			{{ $t("pages.About.bookAuthors") }}
 		</p>
 		<p>{{ $t("pages.About.thirdParagraph") }}</p>
+		<p>{{ $t("pages.About.fourthParagraph") }}</p>
 	</section>
 </template>
 
