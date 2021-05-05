@@ -10,6 +10,7 @@
 				$t("pages.Contact.pageTitle")
 			}}</router-link>
 			<router-link to="/things">{{ $t("pages.Things.pageTitle") }}</router-link>
+			<Score />
 		</div>
 		<div class="controls">
 			<LocalePicker />
@@ -19,6 +20,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Score from "@/components/Score/Score.vue";
 import LocalePicker from "@/components/LocalePicker/LocalePicker.vue";
 
 export default defineComponent({
@@ -27,6 +29,7 @@ export default defineComponent({
 		return {};
 	},
 	components: {
+		Score,
 		LocalePicker
 	}
 });
