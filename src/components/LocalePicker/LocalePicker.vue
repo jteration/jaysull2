@@ -12,41 +12,37 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, Ref, ref } from "vue";
+import { defineComponent, computed } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
 	name: "LocalePicker",
 	setup() {
-		const locales: Ref<string[]> = ref(["en", "es"]);
-		const locale: Ref<string> = ref("en");
+		const i18n = useI18n();
+		const locales = i18n.availableLocales;
+		const locale = computed(() => i18n.locale).value;
 
-		return { locale, locales };
-	},
-	mounted() {
-		this.locales = this.$i18n.availableLocales;
-		const locale = localStorage.getItem("LocalePicker.locale");
-
-		if (locale) {
-			this.setLocale(locale);
-		} else {
-			this.locale = this.$i18n.locale;
+		function setLocale(newLocale: string) {
+			i18n.locale.value = newLocale;
+			document.documentElement.lang = newLocale;
+			localStorage.setItem("LocalePicker.locale", newLocale);
 		}
-	},
-	methods: {
-		localeSelection(e: Event) {
+
+		function localeSelection(e: Event) {
 			const currentTarget = e.currentTarget as HTMLSelectElement;
 
-			if (this.locales.includes(currentTarget.value)) {
-				this.setLocale(currentTarget.value);
+			if (locales.includes(currentTarget.value)) {
+				setLocale(currentTarget.value);
 			}
-		},
-		setLocale(locale: string) {
-			if (this.$root) {
-				this.locale = locale;
-				this.$root.$i18n.locale = locale;
-				document.documentElement.lang = locale;
-				localStorage.setItem("LocalePicker.locale", locale);
-			}
+		}
+
+		return { locale, locales, setLocale, localeSelection };
+	},
+	mounted() {
+		const storedLocale = localStorage.getItem("LocalePicker.locale");
+
+		if (storedLocale) {
+			this.setLocale(storedLocale);
 		}
 	}
 });
