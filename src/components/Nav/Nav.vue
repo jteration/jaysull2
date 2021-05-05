@@ -15,6 +15,7 @@
 		</div>
 		<div class="controls">
 			<LocalePicker />
+			<ThemePicker />
 		</div>
 	</nav>
 </template>
@@ -24,13 +25,15 @@ import { defineComponent } from "vue";
 import Score from "@/components/Score/Score.vue";
 import Prize from "@/components/Prize/Prize.vue";
 import LocalePicker from "@/components/LocalePicker/LocalePicker.vue";
+import ThemePicker from "@/components/ThemePicker/ThemePicker.vue";
 
 export default defineComponent({
 	name: "Nav",
 	components: {
 		Score,
 		Prize,
-		LocalePicker
+		LocalePicker,
+		ThemePicker
 	}
 });
 </script>
