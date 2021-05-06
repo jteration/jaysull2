@@ -2,7 +2,7 @@
 	<section id="things">
 		<h1>{{ $t("pages.Things.pageTitle") }}</h1>
 		<p>
-			{{ $t("pages.Things.codeForThisWebsite") }} -&nbsp;
+			{{ $t("pages.Things.codeForThisWebsite") }} -
 			<a
 				href="https://github.com/jteration/jaysull2"
 				rel="noopener noreferrer"
