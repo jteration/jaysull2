@@ -2,12 +2,21 @@
 	<section id="things">
 		<h1>{{ $t("pages.Things.pageTitle") }}</h1>
 		<p>
-			{{ $t("pages.Things.codeForThisWebsite") }} -&nbsp;
+			{{ $t("pages.Things.codeForThisWebsite") }} -
 			<a
 				href="https://github.com/jteration/jaysull2"
 				rel="noopener noreferrer"
 				target="_blank"
 				>https://github.com/jteration/jaysull2</a
+			>
+		</p>
+		<p>
+			{{ $t("pages.Things.JSONParser") }} -
+			<a
+				href="https://github.com/jteration/rs_json"
+				rel="noopener noreferrer"
+				target="_blank"
+				>https://github.com/jteration/rs_json</a
 			>
 		</p>
 	</section>

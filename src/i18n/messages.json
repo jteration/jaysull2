@@ -9,9 +9,10 @@
 			"About": {
 				"pageTitle": "About",
 				"firstParagraph": "Hello, my name is Jay and I am a software engineer. I am currently based out of Kansas City, Missouri, but have lived and worked in Washington, California, Kansas, and Colorado.",
-				"secondParagraph": "My background is mostly in JavaScript but I have some experience with C# and Java and am currently learning Rust. I am about 2/3 of the way in of",
+				"secondParagraph": "My background is mostly in JavaScript but I have some experience with C# and Java and am currently learning Rust. I've recently finished reading",
 				"bookTitle": "The Rust Programming Language",
 				"bookAuthors": "by Steve Klabnik and Carol Nichols.",
+				"secondParagraphCont": "And just finished creating a rudimentary JSON parser from scratch. The code of which can be found on the Things page.",
 				"thirdParagraph": "I love tackling the challenges I encounter day to day as a programmer. I particularly enjoy taking something thats good and turning it into something great. Most of my experience is in building front-end UIs in Vue. I'm trying to broaden my understanding by branching out into systems programming.",
 				"fourthParagraph": "I just rewrote this website using Vue 3! Check out the link to the code on the Things page."
 			},
@@ -35,7 +36,8 @@
 			"Contact": { "pageTitle": "Contact" },
 			"Things": {
 				"pageTitle": "Things",
-				"codeForThisWebsite": "Code for this website"
+				"codeForThisWebsite": "Code for this website",
+				"JSONParser": "JSON parser in Rust"
 			}
 		},
 		"components": {
@@ -69,6 +71,7 @@
 				"secondParagraph": "Mi experiencia es principalmente en JavaScript, pero tengo algo de experiencia con C# y Java y actualmente estoy aprendiendo Rust. Estoy aproximadamente a 2/3 del camino de",
 				"bookTitle": "The Rust Programming Language",
 				"bookAuthors": "de Steve Klabnik y Carol Nichols.",
+				"secondParagraphCont": "Y acabo de terminar de crear un analizador JSON rudimentario desde cero. El código del cual se puede encontrar en la página de Cosas.",
 				"thirdParagraph": "Me encanta afrontar los retos que encuentro día a día como programador. Particularmente disfruto tomar algo que es bueno y convertirlo en algo grandioso. La mayor parte de mi experiencia se basa en la creación de interfaces de usuario de front-end en Vue. Estoy tratando de ampliar mi comprensión diversificándome en la programación de sistemas.",
 				"fourthParagraph": "¡Acabo de reescribir este sitio web usando Vue 3! Consulte el enlace al código en la página Cosas."
 			},
@@ -92,7 +95,8 @@
 			"Contact": { "pageTitle": "Contacto" },
 			"Things": {
 				"pageTitle": "Cosas",
-				"codeForThisWebsite": "Código para este sitio web"
+				"codeForThisWebsite": "Código para este sitio web",
+				"JSONParser": "Analizador JSON en Rust"
 			}
 		},
 		"components": {

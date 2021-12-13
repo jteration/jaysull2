@@ -6,6 +6,7 @@
 			{{ $t("pages.About.secondParagraph") }}
 			<cite>{{ $t("pages.About.bookTitle") }}</cite>
 			{{ $t("pages.About.bookAuthors") }}
+			{{ $t("pages.About.secondParagraphCont") }}
 		</p>
 		<p>{{ $t("pages.About.thirdParagraph") }}</p>
 		<p>{{ $t("pages.About.fourthParagraph") }}</p>
