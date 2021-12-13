@@ -2,7 +2,20 @@
 	<section id="career">
 		<h1>{{ $t("pages.Experience.heading") }}</h1>
 		<br />
-		<h2>Omnitracs ({{ $t("pages.Experience.current") }})</h2>
+		<h2>Red Violet ({{ $t("pages.Experience.current") }})</h2>
+		<a
+			href="https://www.redviolet.com/"
+			rel="noopener noreferrer"
+			target="_blank"
+			>Website</a
+		>
+		<p>
+			{{ $t("pages.Experience.title") }} -
+			{{ $t("pages.Experience.fullstackSoftwareDevelopmentEngineer") }}
+		</p>
+		<p>{{ $t("pages.Experience.withTheCompanyFor") }} {{ timeSpent }}</p>
+		<br />
+		<h2>Omnitracs</h2>
 		<a
 			href="https://www.omnitracs.com/"
 			rel="noopener noreferrer"
@@ -13,7 +26,11 @@
 			{{ $t("pages.Experience.title") }} -
 			{{ $t("pages.Experience.seniorSoftwareEngineer") }}
 		</p>
-		<p>{{ $t("pages.Experience.withTheCompanyFor") }} {{ timeSpent }}</p>
+		<p>
+			{{ $t("pages.Experience.withTheCompanyFor") }} 2
+			{{ $t("pages.Experience.years") }}, 5 {{ $t("pages.Experience.months") }},
+			{{ $t("pages.Experience.and") }} 9 {{ $t("pages.Experience.days") }}
+		</p>
 		<br />
 		<h2>IHS Markit</h2>
 		<a
@@ -53,7 +70,7 @@ export default defineComponent({
 	name: "Experience",
 	setup() {
 		const msInDay = 86400000;
-		const start = new Date("2019-07-08T08:00:00-0700");
+		const start = new Date("2021-12-13T08:00:00-0600");
 		const now = new Date();
 		const diff = now.getTime() - start.getTime();
 		const years = Math.floor(diff / (86400000 * 365));
@@ -66,11 +83,17 @@ export default defineComponent({
 
 		const timeSpent = computed(() => {
 			return `${years} ${
-				years > 1 ? t("pages.Experience.years") : t("pages.Experience.year")
+				years > 1 || years === 0
+					? t("pages.Experience.years")
+					: t("pages.Experience.year")
 			}, ${months} ${
-				months > 1 ? t("pages.Experience.months") : t("pages.Experience.month")
+				months > 1 || months === 0
+					? t("pages.Experience.months")
+					: t("pages.Experience.month")
 			}, ${t("pages.Experience.and")} ${days} ${
-				days > 1 ? t("pages.Experience.days") : t("pages.Experience.day")
+				days > 1 || days === 0
+					? t("pages.Experience.days")
+					: t("pages.Experience.day")
 			}`;
 		});
 
