@@ -37,7 +37,8 @@
 			"Things": {
 				"pageTitle": "Things",
 				"codeForThisWebsite": "Code for this website",
-				"JSONParser": "JSON parser in Rust"
+				"JSONParser": "JSON parser in Rust",
+				"HTTPParser": "HTTP parser in Rust"
 			}
 		},
 		"components": {
@@ -96,7 +97,8 @@
 			"Things": {
 				"pageTitle": "Cosas",
 				"codeForThisWebsite": "Código para este sitio web",
-				"JSONParser": "Analizador JSON en Rust"
+				"JSONParser": "Analizador JSON en Rust",
+				"HTTPParser": "Analizador HTTP en Rust"
 			}
 		},
 		"components": {

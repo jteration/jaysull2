@@ -19,6 +19,15 @@
 				>https://github.com/jteration/rs_json</a
 			>
 		</p>
+		<p>
+			{{ $t("pages.Things.HTTPParser") }} -
+			<a
+				href="https://github.com/jteration/rs_http"
+				rel="noopener noreferrer"
+				target="_blank"
+				>https://github.com/jteration/rs_http</a
+			>
+		</p>
 	</section>
 </template>
 
