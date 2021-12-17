@@ -63,39 +63,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from "vue";
+import { defineComponent } from "vue";
 import { useI18n } from "vue-i18n";
+import { getTimeSpent } from "@/utils/time-spent";
 
 export default defineComponent({
 	name: "Experience",
 	setup() {
-		const msInDay = 86400000;
 		const start = new Date("2021-12-13T08:00:00-0600");
-		const now = new Date();
-		const diff = now.getTime() - start.getTime();
-		const years = Math.floor(diff / (86400000 * 365));
-		const diffMinusYears = diff - years * (86400000 * 365);
-		const months = Math.floor(diffMinusYears / (msInDay * 30));
-		const diffMinusYearsAndMonths = diffMinusYears - months * (msInDay * 30);
-		const days = Math.floor(diffMinusYearsAndMonths / msInDay);
-
 		const { t } = useI18n();
-
-		const timeSpent = computed(() => {
-			return `${years} ${
-				years > 1 || years === 0
-					? t("pages.Experience.years")
-					: t("pages.Experience.year")
-			}, ${months} ${
-				months > 1 || months === 0
-					? t("pages.Experience.months")
-					: t("pages.Experience.month")
-			}, ${t("pages.Experience.and")} ${days} ${
-				days > 1 || days === 0
-					? t("pages.Experience.days")
-					: t("pages.Experience.day")
-			}`;
-		});
+		const timeSpent = getTimeSpent(start, t);
 
 		return { timeSpent };
 	}
