@@ -9,7 +9,7 @@ import { defineComponent, computed } from "vue";
 import { useStore } from "@/store";
 
 export default defineComponent({
-	name: "Score",
+	name: "ScoreDisplay",
 	setup() {
 		const store = useStore();
 		const score = computed(() => store.state.game.score);

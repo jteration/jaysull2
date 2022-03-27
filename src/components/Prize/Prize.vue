@@ -12,7 +12,7 @@ import { defineComponent, computed } from "vue";
 import { useStore } from "@/store";
 
 export default defineComponent({
-	name: "Prize",
+	name: "PrizeDisplay",
 	setup() {
 		const store = useStore();
 		const score = computed(() => store.state.game.score);

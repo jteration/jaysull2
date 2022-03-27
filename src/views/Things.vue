@@ -35,6 +35,6 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-	name: "Things"
+	name: "ThingsPage"
 });
 </script>

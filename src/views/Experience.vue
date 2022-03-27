@@ -68,7 +68,7 @@ import { useI18n } from "vue-i18n";
 import { getTimeSpent } from "@/utils/time-spent";
 
 export default defineComponent({
-	name: "Experience",
+	name: "ExperiencePage",
 	setup() {
 		const start = new Date("2021-12-13T08:00:00-0600");
 		const { t } = useI18n();
