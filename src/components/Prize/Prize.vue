@@ -9,13 +9,13 @@
 
 <script lang="ts">
 import { defineComponent, computed } from "vue";
-import { useStore } from "@/store";
+import { useGameStore } from "@/store/game";
 
 export default defineComponent({
 	name: "PrizeDisplay",
 	setup() {
-		const store = useStore();
-		const score = computed(() => store.state.game.score);
+		const gameStore = useGameStore();
+		const score = computed(() => gameStore.score);
 		const showPrize = computed(() => score.value >= 5);
 		const prize = computed(() => {
 			const { value } = score;

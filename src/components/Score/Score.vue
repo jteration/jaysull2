@@ -1,21 +1,18 @@
 <template>
-	<span v-if="showScore" aria-label="Score of hidden pixel game">{{
-		score
+	<span v-if="gameStore.score > 0" aria-label="Score of hidden pixel game">{{
+		gameStore.score
 	}}</span>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from "vue";
-import { useStore } from "@/store";
+import { defineComponent } from "vue";
+import { useGameStore } from "@/store/game";
 
 export default defineComponent({
 	name: "ScoreDisplay",
 	setup() {
-		const store = useStore();
-		const score = computed(() => store.state.game.score);
-		const showScore = computed(() => score.value > 0);
-
-		return { score, showScore };
+		const gameStore = useGameStore();
+		return { gameStore };
 	}
 });
 </script>

@@ -3,8 +3,8 @@
 		<label for="themeSelect">{{
 			$t("components.ThemePicker.themeLabel")
 		}}</label>
-		<select id="themeSelect" :value="theme" @change="handleThemeChange">
-			<option v-for="theme in themes" :key="theme" :value="theme">
+		<select id="themeSelect" :value="uiStore.theme" @change="handleThemeChange">
+			<option v-for="theme in uiStore.themes" :key="theme" :value="theme">
 				{{ $t(`components.ThemePicker.${theme}`) }}
 			</option>
 		</select>
@@ -12,23 +12,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from "vue";
-import { useStore, MutationTypes } from "@/store";
+import { defineComponent } from "vue";
+import { useUiStore } from "@/store/ui";
 
 export default defineComponent({
 	name: "ThemePicker",
 	setup() {
-		const store = useStore();
-		const themes = computed(() => store.state.ui.themes);
-		const theme = computed(() => store.state.ui.theme);
+		const uiStore = useUiStore();
 
 		function handleThemeChange(e: Event) {
 			const currentTarget = e.currentTarget as HTMLSelectElement;
-
-			store.commit(MutationTypes.UI.SetTheme, currentTarget.value);
+			uiStore.setTheme(currentTarget.value);
 		}
 
-		return { themes, theme, handleThemeChange };
+		return { uiStore, handleThemeChange };
 	}
 });
 </script>

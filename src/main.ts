@@ -2,7 +2,9 @@ import { createApp } from "vue";
 import App from "@/App.vue";
 import "@/registerServiceWorker";
 import router from "@/router";
-import { store, key } from "@/store";
 import i18n from "@/i18n";
+import { createPinia } from "pinia";
 
-createApp(App).use(store, key).use(router).use(i18n).mount("#app");
+const pinia = createPinia();
+
+createApp(App).use(router).use(i18n).use(pinia).mount("#app");

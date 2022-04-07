@@ -6,14 +6,12 @@
 
 <script lang="ts">
 import { defineComponent, computed, ref } from "vue";
-import { useStore, MutationTypes } from "@/store";
+import { useGameStore } from "@/store/game";
 
 export default defineComponent({
 	name: "PixelGame",
 	setup() {
-		const store = useStore();
-		const incrementScore = () =>
-			store.commit(MutationTypes.Game.IncrementScore);
+		const gameStore = useGameStore();
 
 		const X = ref(80);
 		const Y = ref(80);
@@ -30,7 +28,7 @@ export default defineComponent({
 			`;
 		});
 
-		return { incrementScore, X, Y, color, backgroundColor, position };
+		return { gameStore, X, Y, color, backgroundColor, position };
 	},
 	mounted() {
 		this.randomizePosition();
@@ -101,7 +99,7 @@ export default defineComponent({
 		},
 		handleClick(): void {
 			this.randomizePosition();
-			this.incrementScore();
+			this.gameStore.increment();
 		}
 	}
 });
@@ -117,8 +115,8 @@ export default defineComponent({
 	transition: all 0.7s ease-in-out;
 
 	.color {
-		height: 1px;
-		width: 1px;
+		height: 10px;
+		width: 10px;
 	}
 }
 </style>
