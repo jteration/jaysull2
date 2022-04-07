@@ -95,7 +95,9 @@ export default defineComponent({
 
 			this.X = coords.X;
 			this.Y = coords.Y;
-			this.color = Math.floor(Math.random() * 16777215).toString(16);
+			this.color = Math.floor(Math.random() * 16777215)
+				.toString(16)
+				.padStart(6, "0");
 		},
 		handleClick(): void {
 			this.randomizePosition();
@@ -115,8 +117,8 @@ export default defineComponent({
 	transition: all 0.7s ease-in-out;
 
 	.color {
-		height: 10px;
-		width: 10px;
+		height: 3px;
+		width: 3px;
 	}
 }
 </style>
