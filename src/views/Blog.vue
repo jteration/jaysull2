@@ -55,7 +55,11 @@ export default defineComponent({
 			justify-content: flex-start;
 
 			ol {
-				padding-left: 30px;
+				padding-left: 24px;
+
+				li {
+					margin-bottom: 5px;
+				}
 			}
 		}
 
