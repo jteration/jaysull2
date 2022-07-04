@@ -4,6 +4,9 @@ import About from "../views/About.vue";
 import Experience from "../views/Experience.vue";
 import Contact from "../views/Contact.vue";
 import Things from "../views/Things.vue";
+import Blog from "../views/Blog.vue";
+import July4th2022 from "@/components/BlogPosts/July4th2022.vue";
+import July5th2022 from "@/components/BlogPosts/July5th2022.vue";
 
 const routes: Array<RouteRecordRaw> = [
 	{
@@ -30,6 +33,25 @@ const routes: Array<RouteRecordRaw> = [
 		path: "/things",
 		name: "Things",
 		component: Things
+	},
+	{
+		path: "/blog",
+		name: "Blog",
+		component: Blog,
+		children: [
+			{
+				path: "July4th2022",
+				component: July4th2022
+			},
+			{
+				path: "July5th2022",
+				component: July5th2022
+			},
+			{
+				path: ":pathMatch(.*)*",
+				redirect: { name: "Blog" }
+			}
+		]
 	},
 	{
 		path: "/:pathMatch(.*)*",
