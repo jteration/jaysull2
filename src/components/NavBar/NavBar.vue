@@ -28,7 +28,7 @@ import LocalePicker from "@/components/LocalePicker/LocalePicker.vue";
 import ThemePicker from "@/components/ThemePicker/ThemePicker.vue";
 
 export default defineComponent({
-	name: "MainNav",
+	name: "NavBar",
 	components: {
 		Score,
 		Prize,

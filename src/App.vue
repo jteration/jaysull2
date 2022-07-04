@@ -1,18 +1,18 @@
 <template>
-	<Nav />
+	<NavBar />
 	<main>
 		<router-view />
 		<PixelGame />
 	</main>
-	<Footer />
+	<FootBar />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import { useUiStore } from "@/store/ui";
-import Nav from "@/components/Nav/Nav.vue";
+import NavBar from "@/components/NavBar/NavBar.vue";
 import PixelGame from "@/components/PixelGame/PixelGame.vue";
-import Footer from "@/components/Footer/Footer.vue";
+import FootBar from "@/components/FootBar/FootBar.vue";
 
 export default defineComponent({
 	name: "App",
@@ -23,9 +23,9 @@ export default defineComponent({
 		return {};
 	},
 	components: {
-		Nav,
+		NavBar,
 		PixelGame,
-		Footer
+		FootBar
 	}
 });
 </script>
