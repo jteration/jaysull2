@@ -43,6 +43,7 @@
 				"HTTPParser": "HTTP parser in Rust",
 				"cityBlock": "Complex animation of a small city block coded in HTML and CSS only",
 				"capsacinClicker": "Clicker game built with React",
+				"horizonHills": "Brochure website built with React",
 				"hosted": "Hosted",
 				"code": "Code"
 			},
@@ -112,6 +113,7 @@
 				"HTTPParser": "Analizador HTTP en Rust",
 				"cityBlock": "Animación compleja de una pequeña manzana codificada solo en HTML y CSS",
 				"capsacinClicker": "Juego clicker construido con React y Redux",
+				"horizonHills": "Sitio web del folleto construido con React",
 				"hosted": "Alojado",
 				"code": "Código"
 			},

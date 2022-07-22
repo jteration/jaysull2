@@ -88,6 +88,27 @@
         >https://jteration.github.io/capsaicin-clicker</a
       >
     </p>
+    <p>
+      {{ $t("pages.Things.horizonHills") }}
+    </p>
+    <p class="indented">
+      - {{ $t("pages.Things.code") }}
+      <a
+        href="https://github.com/jteration/horizon-hills"
+        rel="noopener noreferrer"
+        target="_blank"
+        >https://github.com/jteration/horizon-hills</a
+      >
+    </p>
+    <p class="indented">
+      - {{ $t("pages.Things.hosted") }}
+      <a
+        href="https://jteration.github.io/horizon-hills"
+        rel="noopener noreferrer"
+        target="_blank"
+        >https://jteration.github.io/horizon-hills</a
+      >
+    </p>
   </section>
 </template>
 
