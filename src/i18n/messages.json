@@ -38,9 +38,13 @@
 			"Contact": { "pageTitle": "Contact" },
 			"Things": {
 				"pageTitle": "Things",
-				"codeForThisWebsite": "Code for this website",
+				"thisWebsite": "This website",
 				"JSONParser": "JSON parser in Rust",
-				"HTTPParser": "HTTP parser in Rust"
+				"HTTPParser": "HTTP parser in Rust",
+				"cityBlock": "Complex animation of a small city block coded in HTML and CSS only",
+				"capsacinClicker": "Clicker game built with React",
+				"hosted": "Hosted",
+				"code": "Code"
 			},
 			"Blog": {
 				"pageTitle": "Blog"
@@ -103,9 +107,13 @@
 			"Contact": { "pageTitle": "Contacto" },
 			"Things": {
 				"pageTitle": "Cosas",
-				"codeForThisWebsite": "Código para este sitio web",
+				"thisWebsite": "Este sitio web",
 				"JSONParser": "Analizador JSON en Rust",
-				"HTTPParser": "Analizador HTTP en Rust"
+				"HTTPParser": "Analizador HTTP en Rust",
+				"cityBlock": "Animación compleja de una pequeña manzana codificada solo en HTML y CSS",
+				"capsacinClicker": "Juego clicker construido con React y Redux",
+				"hosted": "Alojado",
+				"code": "Código"
 			},
 			"Blog": {
 				"pageTitle": "Blog"

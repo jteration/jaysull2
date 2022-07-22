@@ -4,4 +4,4 @@ Personal website
 
 Deployed to https://www.jaysull.dev/
 
-Recently rewrote using Vue 3
+Recently rewrote using Vue 3 and Pinia

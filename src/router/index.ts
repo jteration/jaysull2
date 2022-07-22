@@ -41,6 +41,7 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: "",
+        name: "BlogDefault",
         component: July4th2022
       },
       {

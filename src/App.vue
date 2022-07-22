@@ -49,7 +49,7 @@ export default defineComponent({
     overflow-y: auto;
 
     section {
-      max-width: clamp(420px, 600px, 800px);
+      max-width: clamp(600px, 800px, 1000px);
     }
   }
 }
