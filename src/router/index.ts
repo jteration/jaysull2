@@ -9,59 +9,63 @@ import July4th2022 from "@/components/BlogPosts/July4th2022.vue";
 import July5th2022 from "@/components/BlogPosts/July5th2022.vue";
 
 const routes: Array<RouteRecordRaw> = [
-	{
-		path: "/",
-		name: "Home",
-		component: Home
-	},
-	{
-		path: "/about",
-		name: "About",
-		component: About
-	},
-	{
-		path: "/experience",
-		name: "Experience",
-		component: Experience
-	},
-	{
-		path: "/contact",
-		name: "Contact",
-		component: Contact
-	},
-	{
-		path: "/things",
-		name: "Things",
-		component: Things
-	},
-	{
-		path: "/blog",
-		name: "Blog",
-		component: Blog,
-		children: [
-			{
-				path: "July4th2022",
-				component: July4th2022
-			},
-			{
-				path: "July5th2022",
-				component: July5th2022
-			},
-			{
-				path: ":pathMatch(.*)*",
-				redirect: { name: "Blog" }
-			}
-		]
-	},
-	{
-		path: "/:pathMatch(.*)*",
-		redirect: { name: "Home" }
-	}
+  {
+    path: "/",
+    name: "Home",
+    component: Home
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: About
+  },
+  {
+    path: "/experience",
+    name: "Experience",
+    component: Experience
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact
+  },
+  {
+    path: "/things",
+    name: "Things",
+    component: Things
+  },
+  {
+    path: "/blog",
+    name: "Blog",
+    component: Blog,
+    children: [
+      {
+        path: "",
+        component: July4th2022
+      },
+      {
+        path: "July4th2022",
+        component: July4th2022
+      },
+      {
+        path: "July5th2022",
+        component: July5th2022
+      },
+      {
+        path: ":pathMatch(.*)*",
+        redirect: { name: "Blog" }
+      }
+    ]
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: { name: "Home" }
+  }
 ];
 
 const router = createRouter({
-	history: createWebHistory(process.env.BASE_URL),
-	routes
+  history: createWebHistory(process.env.BASE_URL),
+  routes
 });
 
 export default router;

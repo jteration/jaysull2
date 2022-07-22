@@ -1,13 +1,13 @@
 <template>
-	<section id="home">
-		<p>{{ $t("pages.Home.welcome") }}</p>
-	</section>
+  <section id="home">
+    <p>{{ $t("pages.Home.welcome") }}</p>
+  </section>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-	name: "HomePage"
+  name: "HomePage"
 });
 </script>
