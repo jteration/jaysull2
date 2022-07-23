@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Home from "../views/Home.vue";
-import About from "../views/About.vue";
-import Experience from "../views/Experience.vue";
-import Contact from "../views/Contact.vue";
-import Things from "../views/Things.vue";
-import Blog from "../views/Blog.vue";
+import Home from "@/views/Home.vue";
+import About from "@/views/About.vue";
+import Experience from "@/views/Experience.vue";
+import Contact from "@/views/Contact.vue";
+import Things from "@/views/Things.vue";
+import Blog from "@/views/Blog.vue";
 import July4th2022 from "@/components/BlogPosts/July4th2022.vue";
 import July5th2022 from "@/components/BlogPosts/July5th2022.vue";
 
