@@ -1,8 +1,6 @@
 <template>
   <div>
-    <label for="localeSelect">{{
-      $t("components.LocalePicker.localeLabel")
-    }}</label>
+    <label for="localeSelect">{{ $t("components.LocalePicker.localeLabel") }}</label>
     <select id="localeSelect" :value="locale" @change="localeSelection">
       <option v-for="loc in locales" :key="loc" :value="loc">
         {{ $t(`locales.${loc}`) }}

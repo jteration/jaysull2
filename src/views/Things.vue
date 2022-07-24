@@ -6,31 +6,20 @@
     </p>
     <p class="indented">
       - {{ $t("pages.Things.code") }}
-      <a
-        href="https://github.com/jteration/jaysull2"
-        rel="noopener noreferrer"
-        target="_blank"
+      <a href="https://github.com/jteration/jaysull2" rel="noopener noreferrer" target="_blank"
         >https://github.com/jteration/jaysull2</a
       >
     </p>
     <p class="indented">
       - {{ $t("pages.Things.hosted") }}
-      <a
-        href="https://www.jaysull.dev/"
-        rel="noopener noreferrer"
-        target="_blank"
-        >https://www.jaysull.dev/</a
-      >
+      <a href="https://www.jaysull.dev/" rel="noopener noreferrer" target="_blank">https://www.jaysull.dev/</a>
     </p>
     <p>
       {{ $t("pages.Things.JSONParser") }}
     </p>
     <p class="indented">
       - {{ $t("pages.Things.code") }}
-      <a
-        href="https://github.com/jteration/rs_json"
-        rel="noopener noreferrer"
-        target="_blank"
+      <a href="https://github.com/jteration/rs_json" rel="noopener noreferrer" target="_blank"
         >https://github.com/jteration/rs_json</a
       >
     </p>
@@ -39,10 +28,7 @@
     </p>
     <p class="indented">
       - {{ $t("pages.Things.code") }}
-      <a
-        href="https://github.com/jteration/rs_http"
-        rel="noopener noreferrer"
-        target="_blank"
+      <a href="https://github.com/jteration/rs_http" rel="noopener noreferrer" target="_blank"
         >https://github.com/jteration/rs_http</a
       >
     </p>
@@ -51,19 +37,13 @@
     </p>
     <p class="indented">
       - {{ $t("pages.Things.code") }}
-      <a
-        href="https://github.com/jteration/city-block"
-        rel="noopener noreferrer"
-        target="_blank"
+      <a href="https://github.com/jteration/city-block" rel="noopener noreferrer" target="_blank"
         >https://github.com/jteration/city-block</a
       >
     </p>
     <p class="indented">
       - {{ $t("pages.Things.hosted") }}
-      <a
-        href="https://jteration.github.io/city-block"
-        rel="noopener noreferrer"
-        target="_blank"
+      <a href="https://jteration.github.io/city-block" rel="noopener noreferrer" target="_blank"
         >https://jteration.github.io/city-block</a
       >
     </p>
@@ -72,19 +52,13 @@
     </p>
     <p class="indented">
       - {{ $t("pages.Things.code") }}
-      <a
-        href="https://github.com/jteration/capsaicin-clicker"
-        rel="noopener noreferrer"
-        target="_blank"
+      <a href="https://github.com/jteration/capsaicin-clicker" rel="noopener noreferrer" target="_blank"
         >https://github.com/jteration/capsaicin-clicker</a
       >
     </p>
     <p class="indented">
       - {{ $t("pages.Things.hosted") }}
-      <a
-        href="https://jteration.github.io/capsaicin-clicker"
-        rel="noopener noreferrer"
-        target="_blank"
+      <a href="https://jteration.github.io/capsaicin-clicker" rel="noopener noreferrer" target="_blank"
         >https://jteration.github.io/capsaicin-clicker</a
       >
     </p>
@@ -93,19 +67,13 @@
     </p>
     <p class="indented">
       - {{ $t("pages.Things.code") }}
-      <a
-        href="https://github.com/jteration/horizon-hills"
-        rel="noopener noreferrer"
-        target="_blank"
+      <a href="https://github.com/jteration/horizon-hills" rel="noopener noreferrer" target="_blank"
         >https://github.com/jteration/horizon-hills</a
       >
     </p>
     <p class="indented">
       - {{ $t("pages.Things.hosted") }}
-      <a
-        href="https://jteration.github.io/horizon-hills"
-        rel="noopener noreferrer"
-        target="_blank"
+      <a href="https://jteration.github.io/horizon-hills" rel="noopener noreferrer" target="_blank"
         >https://jteration.github.io/horizon-hills</a
       >
     </p>

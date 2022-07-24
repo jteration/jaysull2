@@ -39,10 +39,7 @@ export default defineComponent({
       if (elementAtCoords == null) return false;
       const { nodeName, childNodes } = elementAtCoords;
 
-      if (
-        nodeName === "#text" ||
-        (childNodes.length && childNodes[0].nodeName === "#text")
-      ) {
+      if (nodeName === "#text" || (childNodes.length && childNodes[0].nodeName === "#text")) {
         return true;
       }
 

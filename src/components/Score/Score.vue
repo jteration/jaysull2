@@ -1,9 +1,5 @@
 <template>
-  <span
-    v-if="gameStore.pixel.score > 0"
-    aria-label="Score of hidden pixel game"
-    >{{ gameStore.pixel.score }}</span
-  >
+  <span v-if="gameStore.pixel.score > 0" aria-label="Score of hidden pixel game">{{ gameStore.pixel.score }}</span>
 </template>
 
 <script lang="ts">

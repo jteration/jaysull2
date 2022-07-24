@@ -3,12 +3,8 @@
     <div class="links">
       <router-link to="/">{{ $t("pages.Home.pageTitle") }}</router-link>
       <router-link to="/about">{{ $t("pages.About.pageTitle") }}</router-link>
-      <router-link to="/experience">{{
-        $t("pages.Experience.pageTitle")
-      }}</router-link>
-      <router-link to="/contact">{{
-        $t("pages.Contact.pageTitle")
-      }}</router-link>
+      <router-link to="/experience">{{ $t("pages.Experience.pageTitle") }}</router-link>
+      <router-link to="/contact">{{ $t("pages.Contact.pageTitle") }}</router-link>
       <router-link to="/things">{{ $t("pages.Things.pageTitle") }}</router-link>
       <Score />
       <Prize />

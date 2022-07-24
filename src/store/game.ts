@@ -39,18 +39,9 @@ export const useGameStore = defineStore("game", {
       document.title = `J ${this.typing.score}`;
     },
     setTitle() {
-      const {
-        letterSequence,
-        currentLetterIndex,
-        countDown,
-        loaderIndex,
-        loader
-      } = this.typing;
+      const { letterSequence, currentLetterIndex, countDown, loaderIndex, loader } = this.typing;
       // "abc-----:8|"
-      document.title = `${letterSequence.slice(
-        0,
-        currentLetterIndex + 1
-      )}${"-".repeat(
+      document.title = `${letterSequence.slice(0, currentLetterIndex + 1)}${"-".repeat(
         letterSequence.length - currentLetterIndex - 1
       )} : ${Math.floor(countDown)} ${loader[loaderIndex]}`;
     },
@@ -62,9 +53,7 @@ export const useGameStore = defineStore("game", {
       this.typing.countDown = 9;
       this.typing.letterSequence = "";
       for (let i = 0; i < 5; i += 1) {
-        this.typing.letterSequence += String.fromCharCode(
-          Math.floor(Math.random() * 26 + 97)
-        );
+        this.typing.letterSequence += String.fromCharCode(Math.floor(Math.random() * 26 + 97));
       }
       this.setTitle();
       document.addEventListener("keyup", this.keyPressListener);
@@ -72,13 +61,10 @@ export const useGameStore = defineStore("game", {
     },
     keyPressListener(event: KeyboardEvent) {
       const key = event.key;
-      const currentChar =
-        this.typing.letterSequence[this.typing.currentLetterIndex];
+      const currentChar = this.typing.letterSequence[this.typing.currentLetterIndex];
       if (key === currentChar) {
         this.typing.currentLetterIndex++;
-        if (
-          this.typing.currentLetterIndex < this.typing.letterSequence.length
-        ) {
+        if (this.typing.currentLetterIndex < this.typing.letterSequence.length) {
           this.setTitle();
         } else {
           // Game is won
@@ -116,8 +102,7 @@ export const useGameStore = defineStore("game", {
     },
     typingInterval() {
       this.typing.countDown -= 0.25;
-      this.typing.loaderIndex =
-        this.typing.loaderIndex < 3 ? this.typing.loaderIndex + 1 : 0;
+      this.typing.loaderIndex = this.typing.loaderIndex < 3 ? this.typing.loaderIndex + 1 : 0;
 
       if (this.typing.countDown < 0) {
         this.endTypingGame();

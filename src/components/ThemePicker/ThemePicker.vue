@@ -1,8 +1,6 @@
 <template>
   <div class="themes">
-    <label for="themeSelect">{{
-      $t("components.ThemePicker.themeLabel")
-    }}</label>
+    <label for="themeSelect">{{ $t("components.ThemePicker.themeLabel") }}</label>
     <select id="themeSelect" :value="uiStore.theme" @change="handleThemeChange">
       <option v-for="theme in uiStore.themes" :key="theme" :value="theme">
         {{ $t(`components.ThemePicker.${theme}`) }}

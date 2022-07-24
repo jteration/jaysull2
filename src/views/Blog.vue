@@ -8,9 +8,7 @@
           <li><router-link to="/blog/July4th2022">July4th2022</router-link></li>
           <li><router-link to="/blog/July5th2022">July5th2022</router-link></li>
           <li>
-            <router-link to="/blog/things">{{
-              $t("pages.Things.pageTitle")
-            }}</router-link>
+            <router-link to="/blog/things">{{ $t("pages.Things.pageTitle") }}</router-link>
           </li>
         </ol>
       </nav>

@@ -7,21 +7,13 @@
     </p>
     <p>
       <label for="linkedin">LinkedIn - </label>
-      <a
-        id="linkedin"
-        href="https://www.linkedin.com/in/the-jay-sullivan/"
-        rel="noopener noreferrer"
-        target="_blank"
+      <a id="linkedin" href="https://www.linkedin.com/in/the-jay-sullivan/" rel="noopener noreferrer" target="_blank"
         >https://www.linkedin.com/in/the-jay-sullivan/</a
       >
     </p>
     <p>
       <label for="github">Github - </label>
-      <a
-        id="github"
-        href="https://github.com/jteration"
-        rel="noopener noreferrer"
-        target="_blank"
+      <a id="github" href="https://github.com/jteration" rel="noopener noreferrer" target="_blank"
         >https://github.com/jteration</a
       >
     </p>

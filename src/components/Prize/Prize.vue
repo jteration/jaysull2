@@ -1,10 +1,5 @@
 <template>
-  <span
-    v-if="showPrize"
-    role="img"
-    :aria-label="$t('components.Prize.prizeLabel')"
-    >{{ prize }}</span
-  >
+  <span v-if="showPrize" role="img" :aria-label="$t('components.Prize.prizeLabel')">{{ prize }}</span>
 </template>
 
 <script lang="ts">
