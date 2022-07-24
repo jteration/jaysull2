@@ -1,6 +1,6 @@
 <template>
   <div aria-hidden="true" class="pixel" :style="position" @click="handleClick">
-    <div class="color" :style="backgroundColor" />
+    <div class="color" :style="backgroundColor"></div>
   </div>
 </template>
 
@@ -35,27 +35,23 @@ export default defineComponent({
   },
   methods: {
     isTextNode(X: number, Y: number): boolean {
-      const elemAtDestination = document.elementFromPoint(X, Y);
+      const elementAtCoords = document.elementFromPoint(X, Y);
+      if (elementAtCoords == null) return false;
+      const { nodeName, childNodes } = elementAtCoords;
 
-      if (elemAtDestination) {
-        if (elemAtDestination.nodeName === "#text") {
-          return true;
-        } else if (
-          elemAtDestination.childNodes.length &&
-          elemAtDestination.childNodes[0].nodeName === "#text"
-        ) {
-          return true;
-        }
-
-        return false;
+      if (
+        nodeName === "#text" ||
+        (childNodes.length && childNodes[0].nodeName === "#text")
+      ) {
+        return true;
       }
 
       return false;
     },
     randomizePosition(): void {
-      const coords = { X: 0, Y: 0 };
-      const borderSize = 80;
       const { clientHeight, clientWidth } = document.body;
+      const coords = { X: 0, Y: 0 };
+      const borderSize = 40;
       const bounds = {
         X: {
           min: borderSize,
@@ -75,21 +71,32 @@ export default defineComponent({
       }
 
       function getCoords() {
-        coords.X = Math.floor(Math.random() * clientWidth);
-        coords.Y = Math.floor(Math.random() * clientHeight);
-        // Ensure X and Y are within 80 pixels of the viewport boundaries
-        while (coords.X < bounds.X.min || coords.X > bounds.X.max) {
-          coords.X = Math.floor(Math.random() * clientWidth);
-        }
+        coords.X = Math.random() * clientWidth;
+        coords.Y = Math.random() * clientHeight;
 
-        while (coords.Y < bounds.Y.min || coords.Y > bounds.Y.max) {
-          coords.Y = Math.floor(Math.random() * clientHeight);
-        }
+        const halfWidth = clientWidth / 2;
+        const halfHeight = clientHeight / 2;
+
+        // Shift coordinates so they are inside of the "border"
+        // eslint-disable-next-line
+        coords.X = coords.X < halfWidth
+            ? coords.X + borderSize * (1 - coords.X / halfWidth)
+            : coords.X - borderSize * ((coords.X - halfWidth) / halfWidth);
+        // eslint-disable-next-line
+        coords.Y = coords.Y < halfHeight
+            ? coords.Y + borderSize * (1 - coords.Y / halfHeight)
+            : coords.Y - borderSize * ((coords.Y - halfHeight) / halfHeight);
+
+        coords.X = Math.floor(coords.X);
+        coords.Y = Math.floor(coords.Y);
       }
 
       getCoords();
 
-      while (this.isTextNode(coords.X, coords.Y)) {
+      // Ensure the pixel isn't directly overlapping some text
+      let limit = 10;
+      while (this.isTextNode(coords.X, coords.Y) && limit > 0) {
+        limit--;
         getCoords();
       }
 
