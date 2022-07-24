@@ -5,6 +5,7 @@
     <p>{{ $t("pages.About.secondParagraph") }}</p>
     <p>{{ $t("pages.About.thirdParagraph") }}</p>
     <p>{{ $t("pages.About.fourthParagraph") }}</p>
+    <p>{{ $t("pages.About.fifthParagraph") }}</p>
   </section>
 </template>
 

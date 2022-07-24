@@ -9,9 +9,10 @@
 			"About": {
 				"pageTitle": "About",
 				"firstParagraph": "Welcome to my small corner of the internet. Here you will not find much. Go to the Things link to see a few small things I've worked on over the years. Go to the Experience link to see a few small companies I've worked with over the years.",
-				"secondParagraph": "I've recently moved to Seattle. I moved from near where I grew up in Kansas City, KS. Watching the ships come and go is captivating. Seas of grain wave nothing like the ocean.",
-				"thirdParagraph": "My interests are pampering my cat, spending too much time on YouTube, and worrying about the future. Someday I wish to enjoy some free time and not feel guilty about it.",
-				"fourthParagraph": "Thank you for visiting. The guestbook is currently malfunctioning, and if you would like to join the mailing list, you can be the first to know when it is fixed."
+				"secondParagraph": "You can press the 'a' and 'd' keys to quickly switch between themes.",
+				"thirdParagraph": "I've recently moved to Seattle. I moved from near where I grew up in Kansas City, KS. Watching the ships come and go is captivating. Seas of grain wave nothing like the ocean.",
+				"fourthParagraph": "My interests are pampering my cat, spending too much time on YouTube, and worrying about the future. Someday I wish to enjoy some free time and not feel guilty about it.",
+				"fifthParagraph": "Thank you for visiting. The guestbook is currently malfunctioning, and if you would like to join the mailing list, you can be the first to know when it is fixed."
 			},
 			"Experience": {
 				"pageTitle": "Experience",
@@ -73,9 +74,10 @@
 			"Home": { "pageTitle": "Índice", "welcome": "¡Bienvenido!" },
 			"About": {
 				"firstParagraph": "Bienvenidos a mi pequeño rincón de internet. Aquí no encontrarás mucho. Vaya al enlace Cosas para ver algunas pequeñas cosas en las que he trabajado a lo largo de los años. Vaya al enlace Experiencia para ver algunas pequeñas empresas con las que he trabajado a lo largo de los años.",
-				"secondParagraph": "Recientemente me mudé a Seattle. Me mudé cerca de donde crecí en Kansas City, KS. Ver los barcos ir y venir es cautivador. Los mares de grano nadan como el océano.",
-				"thirdParagraph": "Mis intereses son mimar a mi gato, pasar demasiado tiempo en YouTube y preocuparme por el futuro. Algún día deseo disfrutar de un poco de tiempo libre y no sentirme culpable por ello.",
-				"fourthParagraph": "Gracias por su visita. El libro de visitas no funciona correctamente en este momento, y si desea unirse a la lista de correo, puede ser el primero en saber cuándo se solucionó."
+				"secondParagraph": "Puede presionar las teclas 'a' y 'd' para cambiar rápidamente entre temas.",
+				"thirdParagraph": "Recientemente me mudé a Seattle. Me mudé cerca de donde crecí en Kansas City, KS. Ver los barcos ir y venir es cautivador. Los mares de grano nadan como el océano.",
+				"fourthParagraph": "Mis intereses son mimar a mi gato, pasar demasiado tiempo en YouTube y preocuparme por el futuro. Algún día deseo disfrutar de un poco de tiempo libre y no sentirme culpable por ello.",
+				"fifthParagraph": "Gracias por su visita. El libro de visitas no funciona correctamente en este momento, y si desea unirse a la lista de correo, puede ser el primero en saber cuándo se solucionó."
 			},
 			"Experience": {
 				"pageTitle": "Experiencia",
