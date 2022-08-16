@@ -30,7 +30,7 @@ export default defineComponent({
 
     return { gameStore, X, Y, color, backgroundColor, position };
   },
-  mounted() {
+  created() {
     this.randomizePosition();
   },
   methods: {
