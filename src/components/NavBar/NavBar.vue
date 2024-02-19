@@ -6,6 +6,7 @@
       <router-link to="/experience">{{ $t("pages.Experience.pageTitle") }}</router-link>
       <router-link to="/contact">{{ $t("pages.Contact.pageTitle") }}</router-link>
       <router-link to="/things">{{ $t("pages.Things.pageTitle") }}</router-link>
+      <router-link to="/links">{{ $t("pages.Links.pageTitle") }}</router-link>
       <Score />
       <Prize />
     </div>

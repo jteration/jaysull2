@@ -4,6 +4,7 @@ import About from "@/views/About.vue";
 import Experience from "@/views/Experience.vue";
 import Contact from "@/views/Contact.vue";
 import Things from "@/views/Things.vue";
+import Links from "@/views/Links.vue";
 import Blog from "@/views/Blog.vue";
 import July4th2022 from "@/components/BlogPosts/July4th2022.vue";
 import July5th2022 from "@/components/BlogPosts/July5th2022.vue";
@@ -33,6 +34,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/things",
     name: "Things",
     component: Things
+  },
+  {
+    path: "/links",
+    name: "Links",
+    component: Links
   },
   {
     path: "/blog",

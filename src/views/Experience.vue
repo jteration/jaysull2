@@ -2,13 +2,24 @@
   <section id="career">
     <h1>{{ $t("pages.Experience.heading") }}</h1>
     <br />
-    <h2>Red Violet ({{ $t("pages.Experience.current") }})</h2>
+    <h2>Coinbase ({{ $t("pages.Experience.current") }})</h2>
+    <a href="https://www.coinbase.com/" rel="noopener noreferrer" target="_blank">Website</a>
+    <p>
+      {{ $t("pages.Experience.title") }} -
+      {{ $t("pages.Experience.softwareEngineer") }}
+    </p>
+    <p>{{ $t("pages.Experience.withTheCompanyFor") }} {{ timeSpent }}</p>
+    <br />
+    <h2>Red Violet</h2>
     <a href="https://www.redviolet.com/" rel="noopener noreferrer" target="_blank">Website</a>
     <p>
       {{ $t("pages.Experience.title") }} -
       {{ $t("pages.Experience.fullstackSoftwareDevelopmentEngineer") }}
     </p>
-    <p>{{ $t("pages.Experience.withTheCompanyFor") }} {{ timeSpent }}</p>
+    <p>
+      {{ $t("pages.Experience.withTheCompanyFor") }} 2 {{ $t("pages.Experience.years") }}, 1
+      {{ $t("pages.Experience.month") }}, {{ $t("pages.Experience.and") }} 12 {{ $t("pages.Experience.days") }}
+    </p>
     <br />
     <h2>Omnitracs</h2>
     <a href="https://www.omnitracs.com/" rel="noopener noreferrer" target="_blank">Website</a>
@@ -49,7 +60,7 @@ import { getTimeSpent } from "@/utils/time-spent";
 export default defineComponent({
   name: "ExperiencePage",
   setup() {
-    const start = new Date("2021-12-13T08:00:00-0600");
+    const start = new Date("2024-02-05T08:00:00-0600");
     const { t } = useI18n();
     const timeSpent = getTimeSpent(start, t);
 

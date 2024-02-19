@@ -1,11 +1,12 @@
 import { Path } from "vue-i18n";
 
+const msInDay = 86400000;
+
 export function getTimeSpent(start: Date, t: (key: Path | number) => string): string {
-  const msInDay = 86400000;
   const now = new Date();
   const diff = now.getTime() - start.getTime();
-  const years = Math.floor(diff / (86400000 * 365));
-  const diffMinusYears = diff - years * (86400000 * 365);
+  const years = Math.floor(diff / (msInDay * 365));
+  const diffMinusYears = diff - years * (msInDay * 365);
   const months = Math.floor(diffMinusYears / (msInDay * 30));
   const diffMinusYearsAndMonths = diffMinusYears - months * (msInDay * 30);
   const days = Math.floor(diffMinusYearsAndMonths / msInDay);

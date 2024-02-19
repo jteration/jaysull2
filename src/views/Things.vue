@@ -48,7 +48,7 @@
       >
     </p>
     <p>
-      {{ $t("pages.Things.capsacinClicker") }}
+      {{ $t("pages.Things.capsaicinClicker") }}
     </p>
     <p class="indented">
       - {{ $t("pages.Things.code") }}
